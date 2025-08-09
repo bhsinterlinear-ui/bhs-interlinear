@@ -126,7 +126,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <h1>Bíblia Hebraica Stuttgartensia</h1>
@@ -165,6 +164,22 @@
 
 </head>
 <body>
+    <script>
+    const h5 = document.getElementById('salmos');
+    const texto = h5.textContent.trim();
+    const partes = texto.replace('Salmos ', '').split(/\s+/);
+
+    // Limpa conteúdo e reinsere a palavra "Salmos" como texto normal
+    h5.innerHTML = '<span style="margin-right: 7px;">Salmos</span>';
+
+    partes.forEach(numero => {
+      const link = document.createElement('a');
+      link.href = `https://salmo${numero}interlinear.netlify.app`;
+      link.textContent = numero;
+      h5.appendChild(link);
+    });
+  </script>
+</body>
   <div class="container">
     <div class="coluna hebraico" id="coluna1">
       <div class="versiculo">
@@ -1214,6 +1229,3 @@
 
 </body>
 </html>
-
-
-
