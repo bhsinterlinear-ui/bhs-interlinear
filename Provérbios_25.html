@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Provérbios 25 – Interlinear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      color: purple;
+      font-weight: bold;
+      margin-bottom: 24px;
+      font-size: 1.6em;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .coluna {
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .coluna.hebraico {
+      width: 30%;
+      direction: rtl;
+      text-align: right;
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+
+    .coluna.c2 {
+      width: 70%;
+    }
+
+    .versiculo {
+      display: flex;
+      margin-bottom: 12px;
+    }
+
+    .texto-hebraico {
+      width: 100%;
+      padding-right: 10px;
+    }
+
+    .texto-traducao {
+      width: 100%;
+    }
+
+    .grade {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+.celula {
+    display: inline-block;
+    vertical-align: top;
+    margin: 3px;            /* Espaço mínimo horizontal e vertical entre as células */
+    padding: 2px;           /* Espaço interno da célula */
+    box-sizing: border-box; /* Garante que o padding não estoure a largura da célula */
+}
+
+    .linha1 {
+      color: blue;
+      font-style: italic;
+      font-size: 0.6em;
+    }
+
+    .linha2 {
+      color: black;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .linha3 {
+      color: purple;
+    }
+
+    .numero {
+      color: red;
+      font-weight: bold;
+    }
+
+    .hebraico span,
+    .c2 span {
+      cursor: pointer;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .coluna.hebraico {
+        width: 40%;
+      }
+
+      .coluna.c2 {
+        width: 60%;
+      }
+
+      .celula {
+        width: 100px;
+      }
+	 
+  .grade + .grade {
+      margin-top: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Bíblia Hebraica Stuttgartensia</h1>
+  <h1>Interlinear</h1>
+
+  <h2>
+    <a href="https://www.die-bibel.de/en/bible/BHS/PRO.25" target="_blank" class="titulo-link">
+      Provérbios 25
+      <svg class="icone-link" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M10.5 2a.5.5 0 0 0 0 1h2.793L7.146 9.146a.5.5 0 0 0 .708.708L14 3.707V6.5a.5.5 0 0 0 1 0v-4A.5.5 0 0 0 14.5 2h-4z"/>
+        <path d="M13.5 14a.5.5 0 0 1-.5.5H2a2 2 0 0 1-2-2V3.5a.5.5 0 0 1 1 0V12a1 1 0 0 0 1 1h10a.5.5 0 0 1 .5.5z"/>
+      </svg>
+    </a>
+  </h2>
+
+  <style>
+    .titulo-link {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .titulo-link:hover {
+      color: purple;
+    }
+    .icone-link {
+      vertical-align: middle;
+      margin-left: 4px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .titulo-link:hover .icone-link {
+      opacity: 1;
+    }
+  </style>
+
+
+
+  <style>
+    #proverbios {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 1.1em;
+      max-width: 100%;
+    }
+
+    #proverbios a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    #proverbios a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <script>
+    const h5 = document.getElementById('proverbios');
+    const texto = h5.textContent.trim();
+    const partes = texto.replace('Proverbios ', '').split(/\s+/);
+
+    // Limpa conteúdo e reinsere a palavra "Proverbios" como texto normal
+    h5.innerHTML = '<span style="margin-right: 7px;">Salmos</span>';
+
+    partes.forEach(numero => {
+      const link = document.createElement('a');
+      link.href = `https://proverbios${numero}interlinear.netlify.app`;
+      link.textContent = numero;
+      h5.appendChild(link);
+    });
+  </script>
+</body>
+  <div class="container">
+    <div class="coluna hebraico" id="coluna1">
+      <div class="versiculo">
+        <div class="texto-hebraico">
+            <span class="numero">1 </span><span data-id="גַּם־">גַּם־ּ</span>
+			<span data-id="אֵ֭לֶּה">אֵ֭לֶּה</span>
+			<span data-id="מִשְׁלֵ֣י">מִשְׁלֵ֣י</span>
+			<span data-id="שְׁלֹמֹ֑ה">שְׁלֹמֹ֑ה</span>
+			<span data-id="אֲשֶׁ֥ר">אֲשֶׁ֥ר</span>
+			<span data-id="הֶ֝עְתִּ֗יקוּ">הֶ֝עְתִּ֗יקוּ</span>
+			<span data-id="אַנְשֵׁ֤י׀">אַנְשֵׁ֤י׀</span>
+			<span data-id="חִזְקִיָּ֬ה">חִזְקִיָּ֬ה</span>
+			<span data-id="מֶֽלֶךְ־">כמֶֽלֶךְ־</span>
+			<span data-id="יְהוּדָֽה׃">יְהוּדָֽה׃</span>
+			</div>
+			</div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+           <span class="numero">2 </span><span data-id="כְּבֹ֣ד">כְּבֹ֣ד</span>
+			<span data-id="אֱ֭לֹהִים">אֱ֭לֹהִים</span>
+			<span data-id="הַסְתֵּ֣ר">הַסְתֵּ֣ר</span>
+			<span data-id="דָּבָ֑ר">דָּבָ֑ר</span>
+			<span data-id="וּ">וּ</span>
+			<span data-id="כְבֹ֥ד">כְבֹ֥ד</span>
+			<span data-id="מְ֝לָכִ֗ים">מְ֝לָכִ֗ים</span>
+			<span data-id="חֲקֹ֣ר">חֲקֹ֣ר</span>
+			<span data-id="דָּבָֽר׃">דָּבָֽר׃</span>
+			</div>
+			</div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+            <span class="numero">3 </span><span data-id="שָׁמַ֣יִם">שָׁמַ֣יִם</span>
+		<span data-id="לָ֭">לָ֭</span>
+		<span data-id="רוּם">רוּם</span>
+		<span data-id="וָ">וָ</span>
+		<span data-id="אָ֣רֶץ">אָ֣רֶץ</span>
+		<span data-id="לָ">לָ</span>
+		<span data-id="עֹ֑מֶק">עֹ֑מֶק</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="לֵ֥ב">לֵ֥ב</span>
+		<span data-id="מְ֝לָכִ֗ים">מְ֝לָכִ֗ים</span>
+		<span data-id="אֵ֣ין">אֵ֣ין</span>
+		<span data-id="חֵֽקֶר׃">חֵֽקֶר׃</span>
+
+			</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+        <span class="numero">4 </span><span data-id="הָגֹ֣ו">הָגֹ֣ו</span>
+		<span data-id="סִיגִ֣ים">סִיגִ֣ים</span>
+		<span data-id="מִ">מִ</span>
+		<span data-id="כָּ֑סֶף">כָּ֑סֶף</span>
+		<span data-id="וַ">וַ</span>
+		<span data-id="יֵּצֵ֖א">יֵּצֵ֖א</span>
+		<span data-id="לַ">לַ</span>
+		<span data-id="צֹּרֵ֣ף">צֹּרֵ֣ף</span>
+		<span data-id="כֶּֽלִי׃">כֶּֽלִי׃</span>
+			</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">5 </span><span data-id="הָגֹ֣ו">הָגֹ֣ו</span>
+		<span data-id="רָ֭שָׁע">רָ֭שָׁע</span>
+		<span data-id="לִ">לִ</span>
+		<span data-id="פְנֵי־">פְנֵי־</span>
+		<span data-id="מֶ֑לֶךְ">מֶ֑לֶךְ</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="יִכֹּ֖ון">יִכֹּ֖ון</span>
+		<span data-id="בַּ">בַּ</span>
+		<span data-id="צֶּ֣דֶק">צֶּ֣דֶק</span>
+		<span data-id="כִּסְאֹֽו׃">כִּסְאֹֽו׃</span>
+			</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">6 </span><span data-id="אַל־">אַל־</span>
+		<span data-id="תִּתְהַדַּ֥ר">תִּתְהַדַּ֥ר</span>
+		<span data-id="לִ">לִ</span>
+		<span data-id="פְנֵי־">פְנֵי־</span>
+		<span data-id="מֶ֑לֶךְ">מֶ֑לֶךְ</span>
+		<span data-id="וּ">וּ</span>
+		<span data-id="בִ">בִ</span>
+		<span data-id="מְקֹ֥ום">מְקֹ֥ום</span>
+		<span data-id="גְּ֝דֹלִ֗ים">גְּ֝דֹלִ֗ים</span>
+		<span data-id="אַֽל־">אַֽל־</span>
+		<span data-id="תַּעֲמֹֽד׃">תַּעֲמֹֽד׃</span>
+			</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">7 </span><span data-id="כִּ֤י">כִּ֤י</span>
+		<span data-id="טֹ֥וב">טֹ֥וב</span>
+		<span data-id="אֲמָר־">אֲמָר־</span>
+		<span data-id="לְךָ֗">לְךָ֗</span>
+		<span data-id="עֲֽלֵ֫ה">עֲֽלֵ֫ה</span>
+		<span data-id="הֵ֥נָּה">הֵ֥נָּה</span>
+		<span data-id="מֵֽ֭">מֵֽ֭</span>
+		<span data-id="הַשְׁפִּ֣ילְךָ">הַשְׁפִּ֣ילְךָ</span>
+		<span data-id="לִ">לִ</span>
+		<span data-id="פְנֵ֣י">פְנֵ֣י</span>
+		<span data-id="נָדִ֑יב">נָדִ֑יב</span>
+		<span data-id="אֲשֶׁ֖ר">אֲשֶׁ֖ר</span>
+		<span data-id="רָא֣וּ">רָא֣וּ</span>
+		<span data-id="עֵינֶֽיךָ׃">עֵינֶֽיךָ׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">8 </span><span data-id="אַל־">אַל־</span>
+		<span data-id="תֵּצֵ֥א">תֵּצֵ֥א</span>
+		<span data-id="לָ">לָ</span>
+		<span data-id="רִ֗ב">רִ֗ב</span>
+		<span data-id="מַ֫הֵ֥ר">מַ֫הֵ֥ר</span>
+		<span data-id="פֶּ֣ן">פֶּ֣ן</span>
+		<span data-id="מַה־">מַה־</span>
+		<span data-id="תַּ֭עֲשֶׂה">תַּ֭עֲשֶׂה</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="אַחֲרִיתָ֑הּ">אַחֲרִיתָ֑הּ</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="הַכְלִ֖ים">הַכְלִ֖ים</span>
+		<span data-id="אֹתְךָ֣">אֹתְךָ֣</span>
+		<span data-id="רֵעֶֽךָ׃">רֵעֶֽךָ׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">9 </span><span data-id="רִֽ֭יבְךָ">רִֽ֭יבְךָ</span>
+		<span data-id="רִ֣יב">רִ֣יב</span>
+		<span data-id="אֶת־">אֶת־</span>
+		<span data-id="רֵעֶ֑ךָ">רֵעֶ֑ךָ</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="סֹ֖וד">סֹ֖וד</span>
+		<span data-id="אַחֵ֣ר">אַחֵ֣ר</span>
+		<span data-id="אַל־">אַל־</span>
+		<span data-id="תְּגָֽל׃">תְּגָֽל׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">10 </span><span data-id="פֶּֽן־">פֶּֽן־</span>
+		<span data-id="יְחַסֶּדְךָ֥">יְחַסֶּדְךָ֥</span>
+		<span data-id="שֹׁמֵ֑עַ">שֹׁמֵ֑עַ</span>
+		<span data-id="וְ֝">וְ֝</span>
+		<span data-id="דִבָּתְךָ֗">דִבָּתְךָ֗</span>
+		<span data-id="לֹ֣א">לֹ֣א</span>
+		<span data-id="תָשֽׁוּב׃">תָשֽׁוּב׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+        <span class="numero">11 </span><span data-id="תַּפּוּחֵ֣י">תַּפּוּחֵ֣י</span>
+		<span data-id="זָ֭הָב">זָ֭הָב</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="מַשְׂכִּיֹּ֥ות">מַשְׂכִּיֹּ֥ות</span>
+		<span data-id="כָּ֑סֶף">כָּ֑סֶף</span>
+		<span data-id="דָּ֝בָ֗ר">דָּ֝בָ֗ר</span>
+		<span data-id="דָּבֻ֥ר">דָּבֻ֥ר</span>
+		<span data-id="עַל־">עַל־</span>
+		<span data-id="אָפְנָֽיו׃">אָפְנָֽיו׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">12 </span><span data-id="נֶ֣זֶם">נֶ֣זֶם</span>
+		<span data-id="זָ֭הָב">זָ֭הָב</span>
+		<span data-id="וַ">וַ</span>
+		<span data-id="חֲלִי־">חֲלִי־</span>
+		<span data-id="כָ֑תֶם">כָ֑תֶם</span>
+		<span data-id="מֹוכִ֥יחַ">מֹוכִ֥יחַ</span>
+		<span data-id="חָ֝כָ֗ם">חָ֝כָ֗ם</span>
+		<span data-id="עַל־">עַל־</span>
+		<span data-id="אֹ֥זֶן">אֹ֥זֶן</span>
+		<span data-id="שֹׁמָֽעַת׃">שֹׁמָֽעַת׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">13 </span><span data-id="כְּ">כְּ</span>
+		<span data-id="צִנַּת־">צִנַּת־</span>
+		<span data-id="שֶׁ֨לֶג׀">שֶׁ֨לֶג׀</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="יֹ֬ום">יֹ֬ום</span>
+		<span data-id="קָצִ֗יר">קָצִ֗יר</span>
+		<span data-id="צִ֣יר">צִ֣יר</span>
+		<span data-id="נֶ֭אֱמָן">נֶ֭אֱמָן</span>
+		<span data-id="לְ">לְ</span>
+		<span data-id="שֹׁלְחָ֑יו">שֹׁלְחָ֑יו</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="אֲדֹנָ֣יו">אֲדֹנָ֣יו</span>
+		<span data-id="יָשִֽׁיב׃">יָשִֽׁיב׃</span>
+		<span data-id="פ">פ</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">14 </span><span data-id="נְשִׂיאִ֣ים">נְשִׂיאִ֣ים</span>
+		<span data-id="וְ֭">וְ֭</span>
+		<span data-id="רוּחַ">רוּחַ</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="גֶ֣שֶׁם">גֶ֣שֶׁם</span>
+		<span data-id="אָ֑יִן">אָ֑יִן</span>
+		<span data-id="אִ֥ישׁ">אִ֥ישׁ</span>
+		<span data-id="מִ֝תְהַלֵּ֗ל">מִ֝תְהַלֵּ֗ל</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="מַתַּת־">מַתַּת־</span>
+		<span data-id="שָֽׁקֶר׃">שָֽׁקֶר׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">15 </span><span data-id="בְּ">בְּ</span>
+		<span data-id="אֹ֣רֶךְ">אֹ֣רֶךְ</span>
+		<span data-id="אַ֭פַּיִם">אַ֭פַּיִם</span>
+		<span data-id="יְפֻתֶּ֣ה">יְפֻתֶּ֣ה</span>
+		<span data-id="קָצִ֑ין">קָצִ֑ין</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="לָשֹׁ֥ון">לָשֹׁ֥ון</span>
+		<span data-id="רַ֝כָּ֗ה">רַ֝כָּ֗ה</span>
+		<span data-id="תִּשְׁבָּר־">תִּשְׁבָּר־</span>
+		<span data-id="גָּֽרֶם׃">גָּֽרֶם׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">16 </span><span data-id="דְּבַ֣שׁ">דְּבַ֣שׁ</span>
+		<span data-id="מָ֭צָאתָ">מָ֭צָאתָ</span>
+		<span data-id="אֱכֹ֣ל">אֱכֹ֣ל</span>
+		<span data-id="דַּיֶּ֑ךָּ">דַּיֶּ֑ךָּ</span>
+		<span data-id="פֶּן־">פֶּן־</span>
+		<span data-id="תִּ֝שְׂבָּעֶ֗נּוּ">תִּ֝שְׂבָּעֶ֗נּוּ</span>
+		<span data-id="וַ">וַ</span>
+		<span data-id="הֲקֵֽאתֹֽו׃">הֲקֵֽאתֹֽו׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">17 </span><span data-id="הֹקַ֣ר">הֹקַ֣ר</span>
+		<span data-id="רַ֭גְלְךָ">רַ֭גְלְךָ</span>
+		<span data-id="מִ">מִ</span>
+		<span data-id="בֵּ֣ית">בֵּ֣ית</span>
+		<span data-id="רֵעֶ֑ךָ">רֵעֶ֑ךָ</span>
+		<span data-id="פֶּן־">פֶּן־</span>
+		<span data-id="יִ֝שְׂבָּעֲךָ֗">יִ֝שְׂבָּעֲךָ֗</span>
+		<span data-id="וּ">וּ</span>
+		<span data-id="שְׂנֵאֶֽךָ׃">שְׂנֵאֶֽךָ׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">18 </span><span data-id="מֵפִ֣יץ">מֵפִ֣יץ</span>
+		<span data-id="וְ֭">וְ֭</span>
+		<span data-id="חֶרֶב">חֶרֶב</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="חֵ֣ץ">חֵ֣ץ</span>
+		<span data-id="שָׁנ֑וּן">שָׁנ֑וּן</span>
+		<span data-id="אִ֥ישׁ">אִ֥ישׁ</span>
+		<span data-id="עֹנֶ֥ה">עֹנֶ֥ה</span>
+		<span data-id="בְ֝">בְ֝</span>
+		<span data-id="רֵעֵ֗הוּ">רֵעֵ֗הוּ</span>
+		<span data-id="עֵ֣ד">עֵ֣ד</span>
+		<span data-id="שָֽׁקֶר׃">שָֽׁקֶר׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">19 </span><span data-id="שֵׁ֣ן">שֵׁ֣ן</span>
+		<span data-id="רֹ֭עָה">רֹ֭עָה</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="רֶ֣גֶל">רֶ֣גֶל</span>
+		<span data-id="מוּעָ֑דֶת">מוּעָ֑דֶת</span>
+		<span data-id="מִבְטָ֥ח">מִבְטָ֥ח</span>
+		<span data-id="בֹּ֝וגֵ֗ד">בֹּ֝וגֵ֗ד</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="יֹ֣ום">יֹ֣ום</span>
+		<span data-id="צָרָֽה׃">צָרָֽה׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">20 </span><span data-id="מַ֥עֲדֶה">מַ֥עֲדֶה</span>
+		<span data-id="בֶּ֨גֶד׀">בֶּ֨גֶד׀</span>
+		<span data-id="בְּ">בְּ</span>
+		<span data-id="יֹ֣ום">יֹ֣ום</span>
+		<span data-id="קָ֭רָה">קָ֭רָה</span>
+		<span data-id="חֹ֣מֶץ">חֹ֣מֶץ</span>
+		<span data-id="עַל־">עַל־</span>
+		<span data-id="נָ֑תֶר">נָ֑תֶר</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="שָׁ֥ר">שָׁ֥ר</span>
+		<span data-id="בַּ֝">בַּ֝</span>
+		<span data-id="שִּׁרִ֗ים">שִּׁרִ֗ים</span>
+		<span data-id="עַ֣ל">עַ֣ל</span>
+		<span data-id="לֶב־">לֶב־</span>
+		<span data-id="רָֽע׃ פ">רָֽע׃ פ</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">21 </span><span data-id="אִם־">אִם־</span>
+		<span data-id="רָעֵ֣ב">רָעֵ֣ב</span>
+		<span data-id="שֹׂ֭נַאֲךָ">שֹׂ֭נַאֲךָ</span>
+		<span data-id="הַאֲכִלֵ֣הוּ">הַאֲכִלֵ֣הוּ</span>
+		<span data-id="לָ֑חֶם">לָ֑חֶם</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="אִם־">אִם־</span>
+		<span data-id="צָ֝מֵ֗א">צָ֝מֵ֗א</span>
+		<span data-id="הַשְׁקֵ֥הוּ">הַשְׁקֵ֥הוּ</span>
+		<span data-id="מָֽיִם׃">מָֽיִם׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">22 </span><span data-id="כִּ֤י">כִּ֤י</span>
+		<span data-id="גֶֽחָלִ֗ים">גֶֽחָלִ֗ים</span>
+		<span data-id="אַ֭תָּה">אַ֭תָּה</span>
+		<span data-id="חֹתֶ֣ה">חֹתֶ֣ה</span>
+		<span data-id="עַל־">עַל־</span>
+		<span data-id="רֹאשֹׁ֑ו">רֹאשֹׁ֑ו</span>
+		<span data-id="וַֽ֝">וַֽ֝</span>
+		<span data-id="יהוָ֗ה">יהוָ֗ה</span>
+		<span data-id="יְשַׁלֶּם־">יְשַׁלֶּם־</span>
+		<span data-id="לָֽךְ׃">לָֽךְ׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">23 </span><span data-id="ר֣וּחַ">ר֣וּחַ</span>
+		<span data-id="צָ֭פֹון">צָ֭פֹון</span>
+		<span data-id="תְּחֹ֣ולֵֽל">תְּחֹ֣ולֵֽל</span>
+		<span data-id="גָּ֑שֶׁם">גָּ֑שֶׁם</span>
+		<span data-id="וּ">וּ</span>
+		<span data-id="פָנִ֥ים">פָנִ֥ים</span>
+		<span data-id="נִ֝זְעָמִ֗ים">נִ֝זְעָמִ֗ים</span>
+		<span data-id="לְשֹׁ֣ון">לְשֹׁ֣ון</span>
+		<span data-id="סָֽתֶר׃">סָֽתֶר׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">24 </span><span data-id="טֹ֗וב">טֹ֗וב</span>
+		<span data-id="שֶׁ֥בֶת">שֶׁ֥בֶת</span>
+		<span data-id="עַל־">עַל־</span>
+		<span data-id="פִּנַּת־">פִּנַּת־</span>
+		<span data-id="גָּ֑ג">גָּ֑ג</span>
+		<span data-id="מֵ">מֵ</span>
+		<span data-id="אֵ֥שֶׁת">אֵ֥שֶׁת</span>
+		<span data-id="מִ֝דְיָנִ֗ים">מִ֝דְיָנִ֗ים</span>
+		<span data-id="וּ">וּ</span>
+		<span data-id="בֵ֥ית">בֵ֥ית</span>
+		<span data-id="חָֽבֶר׃">חָֽבֶר׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">25 </span><span data-id="מַ֣יִם">מַ֣יִם</span>
+		<span data-id="קָ֭רִים">קָ֭רִים</span>
+		<span data-id="עַל־">עַל־</span>
+		<span data-id="נֶ֣פֶשׁ">נֶ֣פֶשׁ</span>
+		<span data-id="עֲיֵפָ֑ה">עֲיֵפָ֑ה</span>
+		<span data-id="וּ">וּ</span>
+		<span data-id="שְׁמוּעָ֥ה">שְׁמוּעָ֥ה</span>
+		<span data-id="טֹ֝ובָ֗ה">טֹ֝ובָ֗ה</span>
+		<span data-id="מֵ">מֵ</span>
+		<span data-id="אֶ֥רֶץ">אֶ֥רֶץ</span>
+		<span data-id="מֶרְחָֽק׃">מֶרְחָֽק׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">26 </span><span data-id="מַעְיָ֣ן">מַעְיָ֣ן</span>
+		<span data-id="נִ֭רְפָּשׂ">נִ֭רְפָּשׂ</span>
+		<span data-id="וּ">וּ</span>
+		<span data-id="מָקֹ֣ור">מָקֹ֣ור</span>
+		<span data-id="מָשְׁחָ֑ת">מָשְׁחָ֑ת</span>
+		<span data-id="צַ֝דִּ֗יק">צַ֝דִּ֗יק</span>
+		<span data-id="מָ֣ט">מָ֣ט</span>
+		<span data-id="לִ">לִ</span>
+		<span data-id="פְנֵֽי־">פְנֵֽי־</span>
+		<span data-id="רָשָֽׁע׃">רָשָֽׁע׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">27 </span><span data-id="אָ֘כֹ֤ל">אָ֘כֹ֤ל</span>
+		<span data-id="דְּבַ֣שׁ">דְּבַ֣שׁ</span>
+		<span data-id="הַרְבֹּ֣ות">הַרְבֹּ֣ות</span>
+		<span data-id="לֹא־">לֹא־</span>
+		<span data-id="טֹ֑וב">טֹ֑וב</span>
+		<span data-id="וְ">וְ</span>
+		<span data-id="חֵ֖קֶר">חֵ֖קֶר</span>
+		<span data-id="כְּבֹדָ֣ם">כְּבֹדָ֣ם</span>
+		<span data-id="כָּבֹֽוד׃">כָּבֹֽוד׃</span>
+		</div>
+      </div>
+      <div class="versiculo">
+        <div class="texto-hebraico">
+		<span class="numero">28 </span><span data-id="עִ֣יר">עִ֣יר</span>
+		<span data-id="פְּ֭רוּצָה">פְּ֭רוּצָה</span>
+		<span data-id="אֵ֣ין">אֵ֣ין</span>
+		<span data-id="חֹומָ֑ה">חֹומָ֑ה</span>
+		<span data-id="אִ֝֗ישׁ">אִ֝֗ישׁ</span>
+		<span data-id="אֲשֶׁ֤ר">אֲשֶׁ֤ר</span>
+		<span data-id="אֵ֖ין">אֵ֖ין</span>
+		<span data-id="מַעְצָ֣ר">מַעְצָ֣ר</span>
+		<span data-id="לְ">לְ</span>
+		<span data-id="רוּחֹֽו׃">רוּחֹֽו׃</span>
+        </div>
+      </div>
+    </div>
+    <div class="coluna c2" id="coluna2">
+      <div class="versiculo">
+        <div class="texto-traducao">
+          <div class="grade">
+            <div class="celula">
+              <div class="linha1">gam- 1571</div>
+              <div class="linha2"><span data-id="גַּם־">גַּם־</span></div>
+              <div class="linha3"><span class="numero">1 </span>Também</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">’êl·leh 428</div>
+              <div class="linha2"><span data-id="אֵ֭לֶּה">אֵ֭לֶּה</span></div>
+              <div class="linha3">estes [são]</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">miš·lê 4912</div>
+              <div class="linha2"><span data-id="מִשְׁלֵ֣י">מִשְׁלֵ֣י</span></div>
+              <div class="linha3">provérbios [de]</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">šə·lō·mōh 8010</div>
+              <div class="linha2"><span data-id="שְׁלֹמֹ֑ה">שְׁלֹמֹ֑ה</span></div>
+              <div class="linha3">Salomão</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">’ă·šer 834</div>
+              <div class="linha2"><span data-id="אֲשֶׁ֥ר">אֲשֶׁ֥ר</span></div>
+              <div class="linha3">que</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">he‘·tî·qū, 6275</div>
+              <div class="linha2"><span data-id="הֶ֝עְתִּ֗יקוּ">הֶ֝עְתִּ֗יקוּ</span></div>
+              <div class="linha3">[foram] transcritos</div>
+            </div>
+          <div class="celula">
+              <div class="linha1">’an·šê 376</div>
+              <div class="linha2"><span data-id="אַנְשֵׁ֤י׀">אַנְשֵׁ֤י׀</span></div>
+              <div class="linha3">pelos homens de</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">ḥiz·qî·yāh 2396</div>
+              <div class="linha2"><span data-id="חִזְקִיָּ֬ה">אחִזְקִיָּ֬ה</span></div>
+              <div class="linha3">Ezequias,</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">me·leḵ- 4428</div>
+              <div class="linha2"><span data-id="מֶֽלֶךְ־">מֶֽלֶךְ־</span></div>
+              <div class="linha3">rei de</div>
+			  </div>
+            <div class="celula">
+              <div class="linha1">yə·hū·ḏāh 3063</div>
+              <div class="linha2"><span data-id="יְהוּדָֽה׃">יְהוּדָֽה׃</span></div>
+              <div class="linha3">Judá.</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">kə·ḇōḏ 3519</div>
+              <div class="linha2"><span data-id="כְּבֹ֣ד">כְּבֹ֣ד</span></div>
+              <div class="linha3"><span class="numero">2 </span>[A] glória</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">’ĕ·lō·hîm 430</div>
+              <div class="linha2"><span data-id="אֱ֭לֹהִים">אֱ֭לֹהִים</span></div>
+              <div class="linha3">[de] Deus</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">has·têr 5641</div>
+              <div class="linha2"><span data-id="הַסְתֵּ֣ר">הַסְתֵּ֣ר</span></div>
+              <div class="linha3">[é] manter</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">dā·ḇār 1697</div>
+              <div class="linha2"><span data-id="דָּבָ֑ר">דָּבָ֑ר</span></div>
+              <div class="linha3">[um] segredo,</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">û</div>
+              <div class="linha2"><span data-id="וּ">וּ</span></div>
+              <div class="linha3">e</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ḵə·ḇōḏ 3519</div>
+              <div class="linha2"><span data-id="כְבֹ֥ד">כְבֹ֥ד</span></div>
+              <div class="linha3">[a] glória</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">mə·lā·ḵîm 4428</div>
+              <div class="linha2"><span data-id="מְ֝לָכִ֗ים">מְ֝לָכִ֗ים</span></div>
+              <div class="linha3">[dos] reis</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ḥă·qōr 2713</div>
+              <div class="linha2"><span data-id="חֲקֹ֣ר">חֲקֹ֣ר</span></div>
+              <div class="linha3">[é] examinar</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">dā·ḇār 1697</div>
+              <div class="linha2"><span data-id="דָּבָֽר׃">דָּבָֽר׃</span></div>
+              <div class="linha3">[um] segredo.</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">šā·ma·yim 8064</div>
+              <div class="linha2"><span data-id="שָׁמַ֣יִם">שָׁמַ֣יִם</span></div>
+              <div class="linha3"><span class="numero">3 </span>[Os] céus</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">lā</div>
+              <div class="linha2"><span data-id="לָ֭">לָ֭</span></div>
+              <div class="linha3">para [a]</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">rūm 7312</div>
+              <div class="linha2"><span data-id="רוּם">רוּם</span></div>
+              <div class="linha3">altitude,</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">wā</div>
+              <div class="linha2"><span data-id="וָ">וָ</span></div>
+              <div class="linha3">e</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">’ā·reṣ 776</div>
+              <div class="linha2"><span data-id="אָ֣רֶץ">אָ֣רֶץ</span></div>
+              <div class="linha3">a terra</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">lā</div>
+              <div class="linha2"><span data-id="לָ">לָ</span></div>
+              <div class="linha3">para [a]</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">‘ō·meq 6011</div>
+              <div class="linha2"><span data-id="עֹ֑מֶק">עֹ֑מֶק</span></div>
+              <div class="linha3">profundidade,</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">wᵊ</div>
+              <div class="linha2"><span data-id="וְ">וְ</span></div>
+              <div class="linha3">e</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">lêḇ 3820</div>
+              <div class="linha2"><span data-id="לֵ֥ב">לֵ֥ב</span></div>
+              <div class="linha3">[o] coração</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">mə·lā·ḵîm 4428</div>
+              <div class="linha2"><span data-id="מְ֝לָכִ֗ים">מְ֝לָכִ֗ים</span></div>
+              <div class="linha3">[dos] reis</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">’ên 369</div>
+              <div class="linha2"><span data-id="אֵ֣ין">אֵ֣ין</span></div>
+              <div class="linha3">não [é]</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ḥê·qer 2714</div>
+              <div class="linha2"><span data-id="חֵֽקֶר׃">חֵֽקֶר׃</span></div>
+              <div class="linha3">previsível.</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">hā·ḡōw 1898</div>
+              <div class="linha2"><span data-id="הָגֹ֣ו">הָגֹ֣ו</span></div>
+              <div class="linha3"><span class="numero">4 </span>Remova</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">sî·ḡîm 5509</div>
+              <div class="linha2"><span data-id="סִיגִ֣ים">סִיגִ֣ים</span></div>
+              <div class="linha3">[a] escória</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">mi</div>
+              <div class="linha2"><span data-id="מִ">מִ</span></div>
+              <div class="linha3">da</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">kā·sep 3701</div>
+              <div class="linha2"><span data-id="כָּ֑סֶף">כָּ֑סֶף</span></div>
+              <div class="linha3">prata,</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">wa</div>
+              <div class="linha2"><span data-id="וַ">וַ</span></div>
+              <div class="linha3">e</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">yê·ṣê 3318</div>
+              <div class="linha2"><span data-id="יֵּצֵ֖א">יֵּצֵ֖א</span></div>
+              <div class="linha3">leve-a</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">la</div>
+              <div class="linha2"><span data-id="לַ">לַ</span></div>
+              <div class="linha3">para</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ṣō·rêp 6884</div>
+              <div class="linha2"><span data-id="צֹּרֵ֣ף">צֹּרֵ֣ף</span></div>
+              <div class="linha3">[o] refinador</div>
+	   	   	</div>
+            <div class="celula">
+              <div class="linha1">ke·lî 3627</div>
+              <div class="linha2"><span data-id="כֶּֽלִי׃">כֶּֽלִי׃</span></div>
+              <div class="linha3">[de] utensílios.</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">hā·ḡōw 1898</div>
+              <div class="linha2"><span data-id="הָגֹ֣ו">הָגֹ֣ו</span></div>
+              <div class="linha3"><span class="numero">5 </span>Remova</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">rā·šā 7563</div>
+              <div class="linha2"><span data-id="רָ֭שָׁע">רָ֭שָׁע</span></div>
+              <div class="linha3">[quem é] mau</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">li</div>
+              <div class="linha2"><span data-id="לִ">לִ</span></div>
+              <div class="linha3">da</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">paniym 6440</div>
+              <div class="linha2"><span data-id="פְנֵי־">פְנֵי־</span></div>
+              <div class="linha3">presença</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">me·leḵ 3559</div>
+              <div class="linha2"><span data-id="מֶ֑לֶךְ">מֶ֑לֶךְ</span></div>
+              <div class="linha3">[do] rei,</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">wᵊ</div>
+              <div class="linha2"><span data-id="וְ">וְ</span></div>
+              <div class="linha3">e</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">kuwn 3559</div>
+              <div class="linha2"><span data-id="יִכֹּ֖ון">יִכֹּ֖ון</span></div>
+              <div class="linha3">[será] estabelecido</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ba</div>
+              <div class="linha2"><span data-id="בַּ">בַּ</span></div>
+              <div class="linha3">na</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ṣe·ḏeq 6664</div>
+              <div class="linha2"><span data-id="צֶּ֣דֶק">צֶּ֣דֶק</span></div>
+              <div class="linha3">justiça</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">kis·’ōw 3678</div>
+              <div class="linha2"><span data-id="כִּסְאֹֽו׃">כִּסְאֹֽו׃</span></div>
+              <div class="linha3">[o seu] trono.</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">’al- 408</div>
+              <div class="linha2"><span data-id="אַל־">אַל־</span></div>
+              <div class="linha3"><span class="numero">6 </span>Não</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">tiṯ·had·dar 1921</div>
+              <div class="linha2"><span data-id="תִּתְהַדַּ֥ר">תִּתְהַדַּ֥ר</span></div>
+              <div class="linha3">se exalte</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">li</div>
+              <div class="linha2"><span data-id="לִ">לִ</span></div>
+              <div class="linha3">na</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">panim 6440</div>
+              <div class="linha2"><span data-id="פְנֵי־">פְנֵי־</span></div>
+              <div class="linha3">presença</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">me·leḵ 4428</div>
+              <div class="linha2"><span data-id="מֶ֑לֶךְ">מֶ֑לֶךְ</span></div>
+              <div class="linha3">[do] rei,</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">û</div>
+              <div class="linha2"><span data-id="וּ">וּ</span></div>
+              <div class="linha3">e</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">vi</div>
+              <div class="linha2"><span data-id="בִ">בִ</span></div>
+              <div class="linha3">no</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">maqom 4725</div>
+              <div class="linha2"><span data-id="מְקֹ֥ום">מְקֹ֥ום</span></div>
+              <div class="linha3">lugar</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">gadol 1419</div>
+              <div class="linha2"><span data-id="גְּ֝דֹלִ֗ים">גְּ֝דֹלִ֗ים</span></div>
+              <div class="linha3">[de] fama</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">’al- 408</div>
+              <div class="linha2"><span data-id="אַֽל־">אַֽל־</span></div>
+              <div class="linha3">não</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">ta·‘ă·mōḏ 5975</div>
+              <div class="linha2"><span data-id="תַּעֲמֹֽד׃">תַּעֲמֹֽד׃</span></div>
+              <div class="linha3">permaneça.</div>
+			</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">7 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">8 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">9 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">10 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">11 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">12 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+				</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">13 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">14 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">15 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">16 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			  		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">17 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			  		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">18 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			  		</div>
+		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">19 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			  		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">20 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			  		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">21 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+			  		</div>
+	    <div class="grade">
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3"><span class="numero">22 </span>xx</div>
+            </div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+            <div class="celula">
+              <div class="linha1">xx 00</div>
+              <div class="linha2"><span data-id="xx">xx</span></div>
+              <div class="linha3">xxx</div>
+		</div>
+		</div>
+	 </div>
+     </div>
+  </div>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const spans = document.querySelectorAll("span[data-id]");
+
+    spans.forEach(span => {
+      span.addEventListener("mouseenter", () => {
+        const id = span.getAttribute("data-id");
+        const allMatching = document.querySelectorAll(`span[data-id="${id}"]`);
+        allMatching.forEach(el => el.classList.add("highlight"));
+      });
+
+      span.addEventListener("mouseleave", () => {
+        const id = span.getAttribute("data-id");
+        const allMatching = document.querySelectorAll(`span[data-id="${id}"]`);
+        allMatching.forEach(el => el.classList.remove("highlight"));
+      });
+    });
+  });
+</script>
+<script>
+  // Transforma número Strong em link para o BibleHub
+  document.querySelectorAll('.linha1').forEach(el => {
+    const match = el.textContent.match(/(.*?)(\d{3,5})$/); // captura texto + número ao final
+    if (match) {
+      const texto = match[1].trim();
+      const numero = match[2];
+      el.innerHTML = `${texto} <a href="https://biblehub.com/hebrew/${numero}.htm" target="_blank">${numero}</a>`;
+    }
+  });
+</script>
+
+</body>
+</html>
