@@ -5,110 +5,89 @@
   <title>Bíblia Interlinear</title>
   <style>
   body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  position: relative;
-  z-index: 0;
-}
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
-body::before {
-content: "";
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 600px;         /* 2x maior */
-  height: 600px;
-  background: url('hebraico-fundo.jpg') no-repeat right top;
-  background-size: contain;
-  opacity: 0.8;
-  z-index: -1;
-}
+  h1 {
+    text-align: center;
+    color: darkblue;
+    margin-top: 30px;
+  }
 
-    .filtro {
-      background-color: rgba(255, 255, 255, 0.6);
-      min-height: 100vh;
-      padding: 20px;
-    }
+  .conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
 
-    h1 {
-      text-align: center;
-      color: darkblue;
-      margin-top: 30px;
-    }
+  .descricao {
+    flex: 1;  /* ocupa o espaço restante */
+    font-size: 22px;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;
+    margin-right: 20px;
+  }
 
-    .descricao {
-      max-width: 800px;
-      margin: 30px auto 60px auto;
-      text-align: center;
-      font-size: 22px;
-      color: purple;
-      line-height: 1.6;
-    }
+  .imagem-indice {
+    width: 40%;              /* imagem ocupa 40% da largura */
+    max-width: 500px;        /* limite opcional */
+  }
 
-    .links {
-      text-align: center;
-      margin-top: 40px;
-    }
+  .imagem-indice img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-    .links a {
-      display: inline-block;
-      margin: 20px;
-      padding: 15px 30px;
-      background-color: #6a5acd;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 10px;
-      transition: background-color 0.3s;
-    }
+  .links {
+    text-align: center;
+    margin-top: 40px;
+  }
 
-    .links a:hover {
-      background-color: #483d8b;
-    }
+  .links a {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 30px;
+    background-color: #6a5acd;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+
+  .links a:hover {
+    background-color: #483d8b;
+  }
   </style>
 </head>
 <body>
-  <div class="filtro">
-    <h1>Bíblia Hebraica Stuttgartensia</h1>
-    <h1>INTERLINEAR</h1>
+  <h1>Bíblia Hebraica Stuttgartensia</h1>
+  <h1>INTERLINEAR</h1>
 
+  <!-- Texto e imagem lado a lado -->
+  <div class="conteudo">
     <div class="descricao">
-      <p>A Bíblia Hebraica Stuttgartensia INTERLINEAR é uma excelente ferramenta de pesquisa e estudo profundo das Escrituras, pois permite o acesso direto ao texto hebraico original com tradução palavra por palavra. Ela facilita a compreensão da estrutura, vocabulário e nuances do hebraico bíblico, auxiliando estudiosos, tradutores e leitores comprometidos em captar com mais precisão o sentido pretendido nos escritos sagrados. Este é um trabalho voluntário, abnegado e dedicado na produção em português de uma versão Interlinear da Bíblia Sagrada com base no texto da <strong>Bíblia Hebraica Stuttgartensia</strong>.<br>
-      <p>Cada título de página, por exemplo "Salmo 96", contém o link para abrir na BHS o texto puro em hebraico; cada palavra hebraica ao ser tocada ou se passar o mouse por cima será destacada nas duas colunas para facilitar o estudo do texto interlinear.<p>
-      <p>Aguardo sugestões de melhorias no e-mail <a href="mailto:bhsinterlinear@gmail.com">bhsinterlinear@gmail.com</a>
-      <p>Escolha entre as opções já disponíveis abaixo:<p>
-    </div>
+      <p>A Bíblia Hebraica Stuttgartensia INTERLINEAR é uma excelente ferramenta de pesquisa e estudo profundo das Escrituras, pois permite o acesso direto ao texto hebraico original com tradução palavra por palavra. Ela facilita a compreensão da estrutura, vocabulário e nuances do hebraico bíblico, auxiliando estudiosos, tradutores e leitores comprometidos em captar com mais precisão o sentido pretendido nos escritos sagrados. Este é um trabalho voluntário, abnegado e dedicado na produção em português de uma versão Interlinear da Bíblia Sagrada com base no texto da <strong>Bíblia Hebraica Stuttgartensia</strong>.</p>
+      <p>Cada título de página, por exemplo "Salmo 96", contém o link para abrir na BHS o texto puro em hebraico; cada palavra hebraica será destacada nas duas colunas ao ser tocada ou passar o mouse por cima para facilitar o estudo do texto interlinear.</p>
+      <p>Aguardo sugestões de melhorias no e-mail <a href="mailto:bhsinterlinear@gmail.com">bhsinterlinear@gmail.com</a></p>
+      <p>Escolha entre as opções já disponíveis abaixo:</p>
     </div>
 
-    <div class="links">
-      <a href="Salmo_96.html">Salmo 96</a>
-      <a href="Provérbios_25.html">Provérbios 25</a>
+    <div class="imagem-indice">
+      <img src="hebraico-fundo.jpg" alt="Imagem Hebraica">
     </div>
+  </div>
+
+  <div class="links">
+    <a href="https://grego-interlinear.netlify.app/">Grego Interlinear</a>
+	<a href="Salmo_98.html">Salmo 96</a>
+    <a href="Provérbios_25.html">Provérbios 25</a>
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
